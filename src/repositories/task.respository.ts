@@ -7,8 +7,14 @@ async function createTask(task: Task){
     )
 }
 
+async function listTask() {
+    const data = await connectiondb.query<Task>('SELECT * FROM task')
+    return data.rows    
+}
+
 const taskRepository = {
-    createTask
+    createTask,
+    listTask
 }
 
 export default taskRepository

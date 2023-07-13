@@ -3,3 +3,5 @@ export type Task = {
     description: string, 
     classification_id: number 
 }
+
+export type genericTask = Partial<Task>
